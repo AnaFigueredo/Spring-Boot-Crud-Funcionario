@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Funcionários</title>
+    <link rel="stylesheet" href="styles/style.css"> <!-- Linkando o CSS para o estilo -->
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Gestão de Funcionários</h1>
+    </header>
+
+    <!-- Formulário de Pesquisa -->
+    <section class="search-section">
+        <h2>Pesquisar Funcionário</h2>
+        <input type="text" id="search-id" placeholder="Digite o ID ou Nome do funcionário">
+        <button id="search-btn" onclick="searchEmployee()">Buscar</button>
+        <button id="clear-search-btn">Nova Pesquisa</button>
+        <div id="search-result"></div> <!-- Div para resultados da pesquisa -->
+    </section>
+
+    <!-- Botão para cadastrar novo funcionário -->
+    <section class="new-employee-section">
+        <button id="new-employee-btn">Cadastrar Novo Funcionário</button>
+    </section>
+
+    <!-- Checkbox para mostrar todos os funcionários -->
+    <section>
+        <label>
+            <input type="checkbox" id="show-all-employees">
+            Mostrar Todos os Funcionários
+        </label>
+    </section>
+
+    <!-- Tabela com Funcionários -->
+    <section class="employee-list-section">
+        <h2>Funcionários Cadastrados</h2>
+        <table id="employee-list">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Cargo</th>
+                <th>Salário</th>
+                <th>Data de Admissão</th>
+                <th>Departamento</th>
+                <th>Status</th>
+                <th>Operações</th>
+            </tr>
+            </thead>
+            <tbody id="employee-list-body">
+            <!-- Dados dos funcionários irão aqui -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Modal para cadastro de funcionário -->
+    <div id="new-employee-modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Cadastrar Funcionário</h2>
+            <form id="new-employee-form">
+                <input type="text" id="nome" placeholder="Nome" required>
+                <input type="text" id="cpf" placeholder="CPF" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="telefone" placeholder="Telefone" required>
+                <input type="text" id="cargo" placeholder="Cargo" required>
+                <input type="number" id="salario" placeholder="Salário" required>
+                <input type="text" id="data_admissao" placeholder="Data de Admissão (AAAA-MM-DD)" required>
+                <input type="text" id="departamento" placeholder="Departamento" required>
+                <select id="status" required>
+                    <option value="ativo">Ativo</option>
+                    <option value="inativo">Inativo</option>
+                </select>
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Sistema de Cadastro de Funcionários</p>
+    </footer>
+</div>
+
+<script src="scripts/script.js"></script>
+</body>
+</html>
