@@ -59,14 +59,14 @@ public class Funcionario {
     private Double salario;
 
     @Column(name="data_admissao")
-    @JsonFormat(pattern = "yyyy-MM-dd")  // Garante que o formato da data seja 'yyyy-MM-dd'
+    @JsonFormat(pattern = "yyyy-MM-dd")  
     private Date data_admissao;
 
     @Column(name = "departamento")
     private String departamento;
 
     @Column(name="status")
-    private String status;  // ou outro tipo dependendo da sua necessidade, como 'Boolean' ou 'Integer'
+    private String status; 
 
 }
 
